@@ -4,7 +4,7 @@ import config
 
 window = tk.Tk()
 
-window.geometry("800x650")
+window.geometry(f"{window.winfo_screenwidth()}x{window.winfo_screenheight()}")
 
 
 def format_response(weather):
@@ -26,7 +26,7 @@ def get_weather(entry):
     label["text"] = format_response(weather)
 
 
-background_image = tk.PhotoImage(file="skybackground.png")
+background_image = tk.PhotoImage(file="mountains5.png")
 background_Label = tk.Label(window, image=background_image)
 background_Label.pack()
 
